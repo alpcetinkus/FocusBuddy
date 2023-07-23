@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teal_700"
+    tools:context=".home.HomeFragment">
+
+<RelativeLayout
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp"
+    >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_add_24"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Focus Buddy"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/timeSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/tvTimeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Good Morning, Alp"
+            android:drawableRight="@drawable/welcome"
+            android:textColor="@color/white"
+            android:textSize="25sp"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dailyGoalSection"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/timeSection"
+        android:layout_margin="20dp"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:progress="100"
+            android:progressTint="@color/white"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Wow Your Daily Goal is 5 Tasks"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/titleTaskSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dailyGoalSection"
+        android:layout_margin="20dp"
+        android:orientation="horizontal"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Today's Tasks"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tvSeeAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="See All"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_weight="4"
+            />
+    </LinearLayout>
+
+<RelativeLayout
+    android:id="@+id/rvTasksSection"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_below="@id/titleTaskSection"
+    android:layout_margin="20dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/task_card"
+        />
+</RelativeLayout>
+
+</RelativeLayout>
+
+</ScrollView>
+
+
+
+
